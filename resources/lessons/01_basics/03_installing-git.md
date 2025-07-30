@@ -1,4 +1,4 @@
-# Lesson 2.1: Installing Git
+# Installing Git
 
 ## Overview
 In this lesson, we will walk through the steps to install Git on your system, verify that it is installed correctly, and set up your basic configuration.

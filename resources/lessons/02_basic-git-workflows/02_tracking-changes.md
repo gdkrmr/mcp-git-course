@@ -1,0 +1,71 @@
+# Tracking Changes in Git
+
+## Overview
+In this lesson, you will learn how to track changes in your project using Git. Tracking changes is essential for monitoring modifications, preparing files for commits, and maintaining a clear history of your work.
+
+## Step 1: Check the Status of Your Repository
+
+1. Open your terminal and navigate to your project directory.
+2. Run the following command to see the current state of your repository:
+   ```bash
+   git status
+   ```
+3. This command shows which files have been modified, added, or deleted, and which files are staged for commit.
+
+## Step 2: Stage Changes
+
+1. To prepare files for committing, add them to the staging area using:
+   ```bash
+   git add <filename>
+   ```
+   For example, to stage a file named `main.py`:
+   ```bash
+   git add main.py
+   ```
+2. To stage all changes in the repository, use:
+   ```bash
+   git add .
+   ```
+3. Run `git status` again to verify that your changes are staged.
+
+### What is the Staging Area?
+
+The staging area (also called the "index") is a space where you can collect changes you want to include in your next commit. When you use `git add`, you move changes from your working directory to the staging area. This lets you review and organize your changes before saving them permanently in the repository. Only files in the staging area will be included in your next commit.
+
+## Step 3: Commit Changes
+
+1. Once your changes are staged, commit them to the repository:
+   ```bash
+   git commit -m "Describe your changes here"
+   ```
+2. The commit message should clearly describe what was changed.
+
+### What is a Commit?
+
+A commit is a snapshot of your project at a specific point in time. When you commit, Git saves the changes that were staged, along with a message describing those changes. Each commit has a unique identifier and records information about the author and date. Commits form the history of your project, allowing you to track progress and revert to previous states if needed.
+
+## Step 4: View Commit History
+
+1. To see a log of all commits in your repository, run:
+   ```bash
+   git log
+   ```
+2. This command displays each commit’s hash, author, date, and message.
+
+## Step 5: Unstage and Discard Changes (Optional)
+
+- To unstage a file:
+  ```bash
+  git reset <filename>
+  ```
+- To discard changes in a file and revert to the last committed version:
+  ```bash
+  git checkout -- <filename>
+  ```
+
+## Conclusion
+You have learned how to track changes in your project using Git. By checking status, staging files, committing changes, and viewing history, you can effectively manage your project's evolution.
+
+## Additional Resources
+- [Git Official Documentation: git status](https://git-scm.com/docs/git-status)
+- [Pro Git Book: Recording Changes to the Repository](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)
