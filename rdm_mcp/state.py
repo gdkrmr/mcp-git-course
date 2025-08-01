@@ -46,13 +46,13 @@ class CourseState():
             step_index (int): The index of the step to set as current.
         """
         if lesson_idx < 0 or step_index < 0:
-            raise Error("Lesson index and step index must be non-negative integers.")
+            raise ToolError("Lesson index and step index must be non-negative integers.")
 
         if lesson_idx >= len(self.state["lessons"]):
-            raise Error(f"Lesson index {lesson_idx} is out of range. There are only {len(self.state['lessons'])} lessons.")
+            raise ToolError(f"Lesson index {lesson_idx} is out of range. There are only {len(self.state['lessons'])} lessons.")
 
         if step_index >= len(self.state["lessons"][lesson_idx]["steps"]):
-            raise Error(f"Step index {step_index} is out of range for lesson {lesson_idx}. It has only {len(self.state['lessons'][lesson_idx]['steps'])} steps.")
+            raise ToolError(f"Step index {step_index} is out of range for lesson {lesson_idx}. It has only {len(self.state['lessons'][lesson_idx]['steps'])} steps.")
 
         self.state["current_lesson"] = lesson_idx
         self.state["current_step"] = step_index
@@ -179,7 +179,7 @@ class CourseState():
         if os.path.exists(step_path):
             with open(step_path, "r") as f:
                 return f.read()
-        return ToolError("Step content not found.")
+        raise ToolError("Step content not found.")
 
     def to_json(self) -> str:
         """

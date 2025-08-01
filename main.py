@@ -1,4 +1,4 @@
-from fastmcp import FastMCP
+from fastmcp import FastMCP #, Context
 from fastmcp.exceptions import ToolError
 from rdm_mcp.state import CourseState
 from rdm_mcp.prompts import wrap_content_in_prompt
@@ -97,24 +97,50 @@ def start_git_course() -> str:
 
 
 @mcp.tool
-def next_git_course_step() -> str:
+async def next_git_course_step(questions_answered: bool, insists: bool) -> str:
     """
-    Moves to the next step in the Git course and returns the content for that step.
+    Moves to the next step in the Git course and returns the content for that step or tells the user to answer the questions or complete the exercises before moving on.
 
     Args:
-        step_content (str): The content for the current step.
-        is_first_step (bool): Whether this is the first step of the course.
+        questions_answered (bool): Indicates whether the user has provided correct answers to the questions in the current step in a prompt. If the answers are not correct, the user should be prompted to answer the questions again.
+
+        insists (bool): Indicates whether the user insists on moving to the next step regardless of whether they have answered the questions. Insisting means that the user explicitly mentions the word "insist" in the current prompt.
 
     Returns:
-        str: The content for the next step in the Git course.
+        str: The content for the next step in the Git course or a message prompting the user to answer the questions or complete the exercises before moving on.
     """
-    return wrap_content_in_prompt(state.advance_step())
+
+    if questions_answered or insists:
+        return wrap_content_in_prompt(state.advance_step())
+    else:
+        return "Please answer the questions or complete the exercises before moving to the next step. If you want to move to the next step anyway, please insist on it."
+
+    ### I don't think any client supports sampling yet, so this is commented out for now. I have implemented the logic in the description of the parameters of the tool.
+
+    #prompt = """Check the following and answer in a single word:
+    #    - Are there any questions in the current step? If there are no question answer "noquestions".
+    #    - Did the user anser the questions in the current step? Answer 'yes'.
+    #    - Did the user insist on advancing to the next step? Answer 'insist'.
+    #    """
+
+    #ctx_response = await ctx.sample(prompt)
+    #response = ctx_response.text.strip().lower()
+
+    #if "yes" in response:
+    #    return wrap_content_in_prompt(state.advance_step())
+    #elif "noquestion" in response:
+    #    return wrap_content_in_prompt(state.advance_step())
+    #elif "insist" in response:
+    #    return wrap_content_in_prompt(state.advance_step())
+    #else:
+    #    return "Please answer the questions or complete the exercises before moving to the next step. If you want to move to the next step anyway, please insist on it."
 
 
 @mcp.tool
 def start_git_lesson_step(lesson_idx: int, step_index: int) -> str:
     """
-    Sets the current lesson and step in the course state and returns the content for that step.
+    Sets the current lesson and step in the course state and returns the content for that step. Do not use this tool to advance the course, use `next_git_course_step` instead.
+
     Args:
         lesson_idx (int): The index of the lesson to set as current.
         step_index (int): The index of the step to set as current.
@@ -124,8 +150,8 @@ def start_git_lesson_step(lesson_idx: int, step_index: int) -> str:
     try:
         state.set_current_lesson_step(lesson_idx, step_index, has_started=True)
         step_content = state.get_current_step_content()
-        return wrapContentInPrompt(step_content, is_first_step=(lesson_idx == 0 and step_index == 0))
-    except Error as e:
+        return wrap_content_in_prompt(step_content)
+    except Exception as e:
         raise ToolError(str(e))
 
 
