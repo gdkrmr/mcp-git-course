@@ -32,7 +32,7 @@ git@git.sc.uni-leipzig.de/ws2025rdm/materials
    ```
 3. List the files:
    ```bash
-   ls
+   ls -la
    ```
 4. You should see the project files and be able to use all Git commands as usual.
 
@@ -50,6 +50,14 @@ git@git.sc.uni-leipzig.de/ws2025rdm/materials
 
 ## Conclusion
 You have successfully cloned a remote Git repository to your local machine. You are now ready to collaborate and contribute to the project.
+
+## Questions
+1. What files and directories were created when you cloned the repository?
+2. How can you check the remote repository URL of your cloned repository?
+3. What is the difference between `git` and `Gitlab` or `GitHub`?
+
+
+
 
 ## Additional Resources
 - [Git Official Documentation: git clone](https://git-scm.com/docs/git-clone)

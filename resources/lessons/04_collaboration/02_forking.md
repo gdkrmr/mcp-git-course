@@ -13,7 +13,7 @@ Forking is used when you want to contribute to a repository you don't have write
 
 ---
 
-## Step 4: Contributing to Open Source
+## Contributing to Open Source
 
 When contributing to open source projects, follow these steps:
 

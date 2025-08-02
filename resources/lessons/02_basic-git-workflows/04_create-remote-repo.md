@@ -41,6 +41,13 @@ In this lesson, you will learn how to connect your local Git repository to a rem
 ## Conclusion
 You have successfully connected your local repository to a remote server and pushed your project. You can now collaborate with others and keep your work backed up online.
 
+## Questions
+1. What is the purpose of adding a remote repository in Git?
+2. How can you check the current remote repositories linked to your local repository?
+3. What does the `-u` flag do when pushing to a remote repository? See `man git-push` for more details.
+4. Your local repository can have several remotes. How would you push to a different remote repository?
+
+
 ## Additional Resources
 - [Git Official Documentation: git remote](https://git-scm.com/docs/git-remote)
 - [Git Official Documentation: git push](https://git-scm.com/docs/git-push)

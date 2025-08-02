@@ -40,7 +40,7 @@ Version control is a system that records changes to files over time, allowing yo
 ## Conclusion
 Understanding version control is critical for modern software development and collaborative projects. It enhances productivity and reduces the risk of errors when managing multiple versions of files. In the next lesson, we will introduce Git, one of the most popular version control systems used today.
 
-## Questions for Reflection
+## Questions
 1. Why is version control important, specifically in software development?
 2. What are the advantages of using a distributed version control system like git over a centralized one?
 3. Describe a scenario where version control facilitates collaboration among team members.

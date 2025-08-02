@@ -49,7 +49,14 @@ Git is an open-source version control system that enables individuals and teams 
    - It allows for collaboration and sharing among multiple developers.
 
 ## Conclusion
-In this lesson, we introduced Git as a version control system, discussed its key features, and outlined fundamental concepts. Understanding these basics will help you get started with Git in the upcoming lessons. 
+In this lesson, we introduced Git as a version control system, discussed its key features, and outlined fundamental concepts. Understanding these basics will help you get started with Git in the upcoming lessons.
+
+## Questions
+1. What are the advantages of using Git over other version control systems?
+2. How does Git's distributed architecture benefit developers?
+3. Why is the staging area important in Git?
+4. Describe a scenario where branching and merging would be useful in a project.
+5. How can remote repositories enhance collaboration among developers?
 
 ## Additional Resources
 - [Git Official Documentation](https://git-scm.com/doc)

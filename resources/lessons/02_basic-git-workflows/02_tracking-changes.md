@@ -66,6 +66,13 @@ A commit is a snapshot of your project at a specific point in time. When you com
 ## Conclusion
 You have learned how to track changes in your project using Git. By checking status, staging files, committing changes, and viewing history, you can effectively manage your project's evolution.
 
+## Questions
+1. What is the purpose of the staging area in Git?
+2. Here are two commit messages. Which one is more descriptive and why?
+   - "Fixed bug"
+   - "Fixed bug in user authentication that caused login failures for new users"
+3. Why should commits be small and focused on a single change?
+
 ## Additional Resources
 - [Git Official Documentation: git status](https://git-scm.com/docs/git-status)
 - [Pro Git Book: Recording Changes to the Repository](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)

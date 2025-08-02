@@ -55,6 +55,12 @@ ssh -T git.sc.uni-leipzig.de
 ## Conclusion
 You have now created and verified your SSH key. This allows you to securely interact with remote Git repositories using SSH authentication.
 
+## Questions
+1. An SSH key is a pair of cryptographic keys used for secure authentication. Why should your private key never leave your device?
+2. What are the benefits of using SSH keys over HTTPS for Git operations?
+3. SSH agents help you manage your SSH keys by keeping them in memory, so you don't have to enter your passphrase every time. How does this improve your workflow?
+4. What is the best ssh agent for your use case? Ask the LLM for help if you are unsure.
+
 ## Additional Resources
 - [GitHub: Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
 - [GitLab: SSH Keys](https://docs.gitlab.com/ee/ssh/)

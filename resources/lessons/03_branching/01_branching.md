@@ -88,6 +88,10 @@ git branch -D <branch-name>
 
 Branching in Git enables flexible, organized, and collaborative development. By mastering branches, you can manage multiple streams of work efficiently and safely.
 
+## Questions
+1. What is the purpose of creating branches in Git?
+2. Find a typo in the materials repo. Create a branch, make the fix, and push it to the remote repository. What steps did you take?
+
 ## Additional Resources
 
 - [Git Official Documentation: Branches](https://git-scm.com/docs/git-branch)

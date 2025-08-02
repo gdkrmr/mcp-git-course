@@ -71,6 +71,28 @@ Sometimes, changes in both branches affect the same lines in a file, resulting i
 
 You have learned how to merge branches in Git and resolve conflicts. Merging is essential for integrating work from multiple contributors and maintaining a cohesive project history.
 
+## Questions
+1. This is an example of a merge conflict. How would you resolve it?
+   ```python
+   <<<<<<< HEAD
+   print(f"Today is {date.today()}")
+   =======
+   print(f"The time is {datetime.now().strftime('%H:%M:%S')}")
+   >>>>>>> feature-return-time
+   ```
+2. Here is another example of a merge conflict. How would you handle it?
+   ```javascript
+   <<<<<<< HEAD
+   function calculateTotal(price, tax) {
+       return price + (price * tax);
+   }
+   =======
+   function calculateTotal(price, discount) {
+       return price - discount;
+   }
+   >>>>>>> feature-discount
+   ```
+
 ## Additional Resources
 
 - [Git Official Documentation: git merge](https://git-scm.com/docs/git-merge)

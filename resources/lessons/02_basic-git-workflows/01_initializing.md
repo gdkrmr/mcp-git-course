@@ -31,6 +31,10 @@ In this lesson, you will learn how to create a new Git repository on your local 
 ## Conclusion
 You have successfully initialized a Git repository and made your first commit. You are now ready to start tracking changes and collaborating using Git.
 
+## Questions
+1. Look at your folder. What new files and folders do you see?
+
+
 ## Additional Resources
 - [Git Official Documentation: git init](https://git-scm.com/docs/git-init)
 - [Pro Git Book: Getting Started](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics)
