@@ -10,4 +10,12 @@ dependencies = [
 
 
 [project.scripts]
-mcp-git = "mcp-git:__main__.py"
+mcp-git = "mcp_git.__main__:main"
+
+
+[build-system]
+requires = ["setuptools >= 45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.package-data]
+"mcp_git" = ["resources/**/*"]

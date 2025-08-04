@@ -1,7 +1,7 @@
 import os
 import json
-from prompts import INTRODUCTION_PROMPT
-from config import STATE_DIR, COURSE_DIR
+from mcp_git.prompts import INTRODUCTION_PROMPT
+from mcp_git.config import STATE_DIR, COURSE_DIR
 from fastmcp.exceptions import ToolError
 
 
