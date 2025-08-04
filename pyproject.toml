@@ -4,12 +4,10 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = [
-    "fastmcp>=2.10.6",
-]
+dependencies = ["fastmcp>=2.10.6"]
 
 [project.scripts]
-mcp-git-course = "mcp_git.__main__:main"
+mcp-git-course = "mcp_git_course.__main__:main"
 
 [build-system]
 requires = ["setuptools >= 45", "wheel"]
