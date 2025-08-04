@@ -1,7 +1,7 @@
 from fastmcp import FastMCP #, Context
 from fastmcp.exceptions import ToolError
-from mcp_git.state import CourseState
-from mcp_git.prompts import wrap_content_in_prompt
+from mcp_git_course.state import CourseState
+from mcp_git_course.prompts import wrap_content_in_prompt
 
 # This should not be necessary the client should be able to run commands directly
 # @mcp.tool
