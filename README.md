@@ -29,7 +29,7 @@ This will install the `mcp-git-course` command, which is the MCP server that ser
 update the package:
 
 ```bash
-pipx upgrade git+https://github.com/gdkrmr/git-mcp.git
+pipx upgrade git+https://github.com/gdkrmr/git-mcp-course.git
 ```
 
 ### Configure for your client
