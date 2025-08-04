@@ -21,7 +21,7 @@ A local LLM client that supports MCP servers, such as [Zed](https://zed.dev), [C
 install via [`pipx`](https://pipx.pypa.io/latest/installation):
 
 ```bash
-pipx install git+https://github.com/gdkrmr/git-mcp.git
+pipx install git+https://github.com/gdkrmr/git-mcp-course.git
 ```
 
 This will install the `mcp-git-course` command, which is the MCP server that serves the course materials.
