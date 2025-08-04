@@ -56,8 +56,24 @@ Add the following to `~/.config/zed/settings.json`
 TODO
 #### VS Code
 TODO
-#### Gemini
-TODO
+#### gemini-cli
+
+Add this to your `~/.gemini/settings.json` file:
+
+```json
+{
+  "mcpServers": {
+    "serverName": {
+      "command": "mcp-git-course",
+      "args": [],
+      "env": {},
+      "cwd": "",
+      "timeout": 30000,
+      "trust": false
+    }
+  }
+}
+```
 
 ## Manually following the course
 
