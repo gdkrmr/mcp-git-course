@@ -1,7 +1,7 @@
 import os
 import json
-from .prompts import INTRODUCTION_PROMPT
-from .config import STATE_DIR, COURSE_DIR
+from prompts import INTRODUCTION_PROMPT
+from config import STATE_DIR, COURSE_DIR
 from fastmcp.exceptions import ToolError
 
 
