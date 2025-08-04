@@ -10,4 +10,4 @@ dependencies = [
 
 
 [project.scripts]
-mcp-git = "mcp-git"
+mcp-git = "mcp-git:__main__.py"
