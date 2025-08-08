@@ -29,3 +29,4 @@ user.email=you@example.com
 ## Questions
 1. `git config user.name "Your Name"` only acts on the local repository. Think why this is useful.
 2. look at the output of `man git-config`. What does `init.defaultBranch` do?
+3. Set `init.defaultBranch` to `main`. How does your global config look like?

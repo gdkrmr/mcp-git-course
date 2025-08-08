@@ -16,9 +16,9 @@ git@git.sc.uni-leipzig.de/ws2025rdm/materials
 2. Navigate to the directory where you want to store the cloned repository.
 3. Run the following command:
    ```bash
-   git clone git@git.sc.uni-leipzig.de/ws2025rdm/materials
+   git clone git@github.com:gdkrmr/git-mcp-course-example.git example
    ```
-4. This command will create a new directory named `materials` containing all the files and history from the remote repository.
+4. This command will create a new directory named `example` containing all the files and history from the remote repository.
 
 ## Step 3: Verify the Clone
 
@@ -52,9 +52,12 @@ git@git.sc.uni-leipzig.de/ws2025rdm/materials
 You have successfully cloned a remote Git repository to your local machine. You are now ready to collaborate and contribute to the project.
 
 ## Questions
-1. What files and directories were created when you cloned the repository?
-2. How can you check the remote repository URL of your cloned repository?
-3. What is the difference between `git` and `Gitlab` or `GitHub`?
+1. explain the different parts of the command `git clone git@github.com:gdkrmr/git-mcp-course-example.git example`, which one(s) are optional?
+2. What files and directories were created when you cloned the repository?
+3. What is the secret from the repository?
+4. What is the license?
+5. How can you check the remote repository URL of your cloned repository?
+6. What is the difference between `git` and `Gitlab` or `GitHub`?
 
 
 

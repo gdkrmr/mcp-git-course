@@ -72,6 +72,11 @@ You have learned how to track changes in your project using Git. By checking sta
    - "Fixed bug"
    - "Fixed bug in user authentication that caused login failures for new users"
 3. Why should commits be small and focused on a single change?
+4. Practical
+    - Create a file named `REAMDE.md` and add some text.
+    - stage the file and commit it to the repository.
+    - What is the output of `git log`?
+    - What is the output of `git diff HEAD..HEAD~`
 
 ## Additional Resources
 - [Git Official Documentation: git status](https://git-scm.com/docs/git-status)

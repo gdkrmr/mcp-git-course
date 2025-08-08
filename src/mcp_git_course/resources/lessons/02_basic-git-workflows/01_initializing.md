@@ -18,7 +18,7 @@ In this lesson, you will learn how to create a new Git repository on your local 
    ```bash
    git init
    ```
-2. This command creates a hidden `.git` directory in your project folder. Git will use this directory to store all version control information.
+2. This command creates a hidden `.git` directory in your project folder. `git` will use this directory to store all version control information.
 
 ## Step 3: Verify Initialization
 

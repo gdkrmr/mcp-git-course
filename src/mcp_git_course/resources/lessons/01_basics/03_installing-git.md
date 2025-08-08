@@ -36,29 +36,6 @@ This command should return the version of Git installed, confirming a successful
 git version 2.34.1
 ```
 
-## Step 3: Basic Configuration
-
-1. Configure your username:
-   ```bash
-   git config --global user.name "Your Name"
-   ```
-
-2. Configure your email:
-   ```bash
-   git config --global user.email "you@example.com"
-   ```
-
-### Step 4: Verify Configuration
-
-To check your configuration settings, run:
-```bash
-git config --global --list
-```
-You should see an output listing your configured username and email:
-```
-user.name=Your Name
-user.email=you@example.com
-```
 
 ## Conclusion
 You have successfully installed Git and configured it with your user information. You can now proceed to the next lesson where we will discuss how to create a Git repository.
