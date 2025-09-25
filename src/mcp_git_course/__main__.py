@@ -47,7 +47,7 @@ STATE = CourseState()
 
 
 @MCP.tool
-def clear_git_course_history() -> str:
+def clear_git_course_state() -> str:
     """
     Clears the course history and resets the course state.
 
