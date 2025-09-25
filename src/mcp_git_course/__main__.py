@@ -40,13 +40,13 @@ from mcp_git_course.prompts import wrap_content_in_prompt
 ###################################################################################################################
 
 
-mcp = FastMCP(name="Git Course",
+MCP = FastMCP(name="Git Course",
               instructions="This server provides an interactive course to help users learn Git version control.")
 
-state = CourseState()
+STATE = CourseState()
 
 
-@mcp.tool
+@MCP.tool
 def clear_git_course_history() -> str:
     """
     Clears the course history and resets the course state.
@@ -54,12 +54,12 @@ def clear_git_course_history() -> str:
     Returns:
         str: A message indicating that the course history has been cleared.
     """
-    state.build_initial_state()
-    state.save_state()
+    STATE.build_initial_state()
+    STATE.save_state()
     return "Your course history has been cleared. You can start over by using the 'start_git_course' tool."
 
 
-@mcp.tool
+@MCP.tool
 def get_git_course_status() -> str:
     """
     Returns the current status of the Git course, including the current lesson and step.
@@ -69,10 +69,10 @@ def get_git_course_status() -> str:
     """
     # return state.to_json()
 
-    has_started = state.state["has_started"]
-    current_lesson = state.state["current_lesson"]
-    current_step = state.state["current_step"]
-    lessons = state.state["lessons"]
+    has_started = STATE.state["has_started"]
+    current_lesson = STATE.state["current_lesson"]
+    current_step = STATE.state["current_step"]
+    lessons = STATE.state["lessons"]
 
     if not has_started:
         return "You have not started the Git course yet. Use the 'start_git_course' tool to begin."
@@ -85,7 +85,7 @@ def get_git_course_status() -> str:
         return "You have completed all lessons in the course!"
 
 
-@mcp.tool
+@MCP.tool
 def start_git_course() -> str:
     """
     Starts the Git course resumes the course from where the user left off, if there is no state, the course will start from the beginning.
@@ -93,10 +93,10 @@ def start_git_course() -> str:
     Returns:
         str: The introduction content for the Git course.
     """
-    return wrap_content_in_prompt(state.get_current_step_content())
+    return wrap_content_in_prompt(STATE.get_current_step_content())
 
 
-@mcp.tool
+@MCP.tool
 async def next_git_course_step(questions_answered: bool, insists: bool) -> str:
     """
     Moves to the next step in the Git course and returns the content for that step or tells the user to answer the questions or complete the exercises before moving on.
@@ -111,7 +111,7 @@ async def next_git_course_step(questions_answered: bool, insists: bool) -> str:
     """
 
     if questions_answered or insists:
-        return wrap_content_in_prompt(state.advance_step())
+        return wrap_content_in_prompt(STATE.advance_step())
     else:
         return "Please answer the questions or complete the exercises before moving to the next step. If you want to move to the next step anyway, please insist on it."
 
@@ -136,7 +136,7 @@ async def next_git_course_step(questions_answered: bool, insists: bool) -> str:
     #    return "Please answer the questions or complete the exercises before moving to the next step. If you want to move to the next step anyway, please insist on it."
 
 
-@mcp.tool
+@MCP.tool
 def start_git_lesson_step(lesson_idx: int, step_index: int) -> str:
     """
     Sets the current lesson and step in the course state and returns the content for that step. Do not use this tool to advance the course, use `next_git_course_step` instead.
@@ -148,15 +148,15 @@ def start_git_lesson_step(lesson_idx: int, step_index: int) -> str:
         str: The content for the current step in the course after setting the lesson and step.
     """
     try:
-        state.set_current_lesson_step(lesson_idx, step_index, has_started=True)
-        step_content = state.get_current_step_content()
+        STATE.set_current_lesson_step(lesson_idx, step_index, has_started=True)
+        step_content = STATE.get_current_step_content()
         return wrap_content_in_prompt(step_content)
     except Exception as e:
         raise ToolError(str(e))
 
 
 def main():
-    mcp.run()
+    MCP.run()
 
 
 if __name__ == "__main__":
