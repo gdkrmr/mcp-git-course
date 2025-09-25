@@ -11,7 +11,6 @@ Use your local LLM client to learn `git` interactively with the help of this cou
 ## How to use
 
 - Set up your local LLM client
-
 - Install and add `mcp-git-course` as an MCP server to your client
 
 ### Requirements
@@ -19,6 +18,8 @@ Use your local LLM client to learn `git` interactively with the help of this cou
 A local LLM client that supports MCP servers, such as [Zed](https://zed.dev), [Claude code](https://claude.ai), [VS Code](https://code.visualstudio.com), or [Gemini](https://ai.google.dev/gemini).
 
 ### Installation
+
+#### `pipx`
 
 install via [`pipx`](https://pipx.pypa.io/latest/installation):
 
@@ -34,9 +35,31 @@ update the package:
 pipx upgrade git+https://github.com/gdkrmr/git-mcp-course.git
 ```
 
+#### `uvx`
+
+use directly via [`uvx`](https://docs.astral.sh/uv/), `uvx` takes care of installation on the fly. Configure as 
+
+```json
+{
+  "git_course": {
+    "command": "uvx",
+    "args": [
+      "--from",
+      "git+https://github.com/gdkrmr/mcp-git-course@master",
+      "mcp-git-course"
+    ]
+  }
+}
+```
+
+note that the exact configuration may be slightly different
+
 ### Configure for your client
+
 #### Zed
+
 Add the following to `~/.config/zed/settings.json`
+
 ```json
 {
   ...,
@@ -55,9 +78,13 @@ Add the following to `~/.config/zed/settings.json`
 ```
 
 #### Claude code
+
 TODO
+
 #### VS Code
+
 TODO
+
 #### gemini-cli
 
 Add this to your `~/.gemini/settings.json` file:
@@ -79,8 +106,9 @@ Add this to your `~/.gemini/settings.json` file:
 
 ## Manually following the course
 
-You can also access the course materials [here](https://github.com/gdkrmr/git-mcp/tree/master/src/mcp_git/resources/lessons) without having an LLM as an intermediary.
+You can also access the course materials [here](https://github.com/gdkrmr/mcp-git-course/tree/master/src/mcp_git/resources/lessons) without having an LLM as an intermediary.
 
 ## Notice
 
-This work was inspired by the [mastra mcp server](https://github.com/mastra-ai)
+This work was inspired by the [mastra mcp server](https://github.com/mastra-ai).
+
