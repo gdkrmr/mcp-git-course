@@ -38,3 +38,4 @@ This course introduces students to Git, the industry-standard version control sy
 - Quizzes after each module
 - Final project submission via Git repository
 - Peer review of code and Git usage
+

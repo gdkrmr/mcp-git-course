@@ -1,6 +1,5 @@
 import os
 import json
-from mcp_git_course.prompts import INTRODUCTION_PROMPT
 from mcp_git_course.config import STATE_DIR, COURSE_DIR
 from fastmcp.exceptions import ToolError
 
@@ -15,7 +14,7 @@ class CourseState():
         state (dict): The current state of the course, including current lesson and step.
 
     Methods:
-        set_current_lesson_step(lesson_idx: int, step_index: int, has_started: bool) -> None:
+        set_current_lesson_step(lesson_idx: int, step_index: int) -> None:
             Sets the current lesson and step in the course state.
         build_initial_state() -> None:
             Reads the course directory and builds the initial state for the course.
@@ -29,6 +28,7 @@ class CourseState():
             Returns the content of the current step in the course.
     """
 
+
     def __init__(self):
         if os.path.exists(os.path.join(STATE_DIR, "state.json")):
             self.load_state()
@@ -37,7 +37,7 @@ class CourseState():
             self.save_state()
 
 
-    def set_current_lesson_step(self, lesson_idx: int, step_index: int, has_started: bool) -> None:
+    def set_current_lesson_step(self, lesson_idx: int, step_index: int) -> None:
         """
         Sets the current lesson and step in the course state.
 
@@ -56,7 +56,6 @@ class CourseState():
 
         self.state["current_lesson"] = lesson_idx
         self.state["current_step"] = step_index
-        self.state["has_started"] = has_started
         self.save_state()
 
 
@@ -95,7 +94,6 @@ class CourseState():
         self.state = {
             "current_lesson": 0,
             "current_step": 0,
-            "has_started": False,
             "lessons": lessons
         }
 
@@ -119,9 +117,12 @@ class CourseState():
         """
         Saves the current state of the course to the state directory.
         """
+
         if not os.path.exists(STATE_DIR):
             os.makedirs(STATE_DIR)
+
         state_file = os.path.join(STATE_DIR, "state.json")
+
         with open(state_file, "w") as f:
             json.dump(self.state, f, indent=4)
 
@@ -136,24 +137,21 @@ class CourseState():
         Returns:
             str: The content for the next step in the course or an indication that the course is complete.
         """
-        if not self.state["has_started"]:
-            self.state["has_started"] = True
+        current_lesson = self.state["current_lesson"]
+        current_step = self.state["current_step"]
+        lesson = self.state["lessons"][current_lesson]
+
+        if current_step < len(lesson["steps"]) - 1:
+            current_step += 1
         else:
-            current_lesson = self.state["current_lesson"]
-            current_step = self.state["current_step"]
-            lesson = self.state["lessons"][current_lesson]
-
-            if current_step < len(lesson["steps"]) - 1:
-                current_step += 1
+            if current_lesson < len(self.state["lessons"]) - 1:
+                current_step = 0
+                current_lesson += 1
             else:
-                if current_lesson < len(self.state["lessons"]) - 1:
-                    current_step = 0
-                    current_lesson += 1
-                else:
-                    return "You have completed the course! Congratulations!"
+                return "You have completed the course! Congratulations!"
 
-            self.state["current_step"] = current_step
-            self.state["current_lesson"] = current_lesson
+        self.state["current_step"] = current_step
+        self.state["current_lesson"] = current_lesson
 
         self.save_state()
         return self.get_current_step_content()
@@ -166,9 +164,6 @@ class CourseState():
         Returns:
             str: The content of the current step.
         """
-        if not self.state["has_started"]:
-            return f"self.state['has_starte']: {self.state['has_started']}, {INTRODUCTION_PROMPT}"
-
         current_lesson = self.state["current_lesson"]
         current_step = self.state["current_step"]
 
@@ -179,7 +174,9 @@ class CourseState():
         if os.path.exists(step_path):
             with open(step_path, "r") as f:
                 return f.read()
-        raise ToolError("Step content not found.")
+        else:
+            raise ToolError("Step content not found.")
+
 
     def to_json(self) -> str:
         """
