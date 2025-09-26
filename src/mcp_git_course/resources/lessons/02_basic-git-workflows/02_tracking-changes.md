@@ -12,45 +12,57 @@ In this lesson, you will learn how to track changes in your project using Git. T
    ```
 3. This command shows which files have been modified, added, or deleted, and which files are staged for commit.
 
-## Step 2: Stage Changes
+
+## Step 2: Create a File
+
+1. Create a file. You can do this with your text editor or with a command
+
+   ```bash
+   echo 'Hello, World!' > README.md
+   ```
+
+2. Run `git status`.
+
+## Step 3: Stage a change
 
 1. To prepare files for committing, add them to the staging area using:
+
    ```bash
-   git add <filename>
+   git add README.md
    ```
-   For example, to stage a file named `main.py`:
-   ```bash
-   git add main.py
-   ```
-2. To stage all changes in the repository, use:
-   ```bash
-   git add .
-   ```
-3. Run `git status` again to verify that your changes are staged.
+
+2. Run `git status` again to verify that your changes are staged.
 
 ### What is the Staging Area?
 
 The staging area (also called the "index") is a space where you can collect changes you want to include in your next commit. When you use `git add`, you move changes from your working directory to the staging area. This lets you review and organize your changes before saving them permanently in the repository. Only files in the staging area will be included in your next commit.
 
-## Step 3: Commit Changes
+## Step 4: Commit Changes
 
 1. Once your changes are staged, commit them to the repository:
+
    ```bash
    git commit -m "Describe your changes here"
    ```
+
 2. The commit message should clearly describe what was changed.
+
+3. Run `git status`, it should say that there is nothing to commit and that the working tree is clean.
 
 ### What is a Commit?
 
-A commit is a snapshot of your project at a specific point in time. When you commit, Git saves the changes that were staged, along with a message describing those changes. Each commit has a unique identifier and records information about the author and date. Commits form the history of your project, allowing you to track progress and revert to previous states if needed.
+- A commit is a snapshot of your project at a specific point in time. 
+- When you commit, Git saves the changes that were staged, along with a message describing those changes. 
+- Each commit has a unique identifier (hash) and records information about the author and date. 
+- Commits link to previous commits forming the history of your project, allowing you to track progress and revert to previous states if needed.
 
-## Step 4: View Commit History
+## Step 5: View Commit History
 
 1. To see a log of all commits in your repository, run:
    ```bash
    git log
    ```
-2. This command displays each commit’s hash, author, date, and message.
+2. This command displays each commit's hash, author, date, and message.
 
 ## Step 5: Unstage and Discard Changes (Optional)
 
@@ -67,6 +79,11 @@ A commit is a snapshot of your project at a specific point in time. When you com
 You have learned how to track changes in your project using Git. By checking status, staging files, committing changes, and viewing history, you can effectively manage your project's evolution.
 
 ## Questions
+1. Provide the outputs of running git status and explain:
+   1. output of `git status` for step 1
+   2. output of `git status` for step 2
+   3. output of `git status` for step 3
+   4. output of `git status` for step 4
 1. What is the purpose of the staging area in Git?
 2. Here are two commit messages. Which one is more descriptive and why?
    - "Fixed bug"

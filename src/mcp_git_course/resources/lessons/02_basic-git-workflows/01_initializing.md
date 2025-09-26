@@ -1,7 +1,7 @@
 # Initializing a Git Repository
 
 ## Overview
-In this lesson, you will learn how to create a new Git repository on your local machine. Initializing a repository is the first step in tracking changes to your project with Git.
+In this lesson, you will learn how to create a new Git repository on your local machine. Initializing a repository is the first step in tracking changes to your project with Git. We will reuse this directory during this lesson.
 
 ## Step 1: Choose or Create a Project Directory
 
@@ -37,4 +37,4 @@ You have successfully initialized a Git repository and made your first commit. Y
 
 ## Additional Resources
 - [Git Official Documentation: git init](https://git-scm.com/docs/git-init)
-- [Pro Git Book: Getting Started](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics)
+- [Pro Git Book: Getting Started](https://git-scm.com/book/en/v2)
