@@ -69,13 +69,9 @@ def get_git_course_status() -> str:
     """
     # return state.to_json()
 
-    has_started = STATE.state["has_started"]
     current_lesson = STATE.state["current_lesson"]
     current_step = STATE.state["current_step"]
     lessons = STATE.state["lessons"]
-
-    if not has_started:
-        return "You have not started the Git course yet. Use the 'start_git_course' tool to begin."
 
     if current_lesson < len(lessons):
         lesson_name = lessons[current_lesson]["name"]
@@ -117,22 +113,22 @@ async def next_git_course_step(questions_answered: bool, insists: bool) -> str:
 
     ### I don't think any client supports sampling yet, so this is commented out for now. I have implemented the logic in the description of the parameters of the tool.
 
-    #prompt = """Check the following and answer in a single word:
+    # prompt = """Check the following and answer in a single word:
     #    - Are there any questions in the current step? If there are no question answer "noquestions".
     #    - Did the user anser the questions in the current step? Answer 'yes'.
     #    - Did the user insist on advancing to the next step? Answer 'insist'.
     #    """
 
-    #ctx_response = await ctx.sample(prompt)
-    #response = ctx_response.text.strip().lower()
+    # ctx_response = await ctx.sample(prompt)
+    # response = ctx_response.text.strip().lower()
 
-    #if "yes" in response:
+    # if "yes" in response:
     #    return wrap_content_in_prompt(state.advance_step())
-    #elif "noquestion" in response:
+    # elif "noquestion" in response:
     #    return wrap_content_in_prompt(state.advance_step())
-    #elif "insist" in response:
+    # elif "insist" in response:
     #    return wrap_content_in_prompt(state.advance_step())
-    #else:
+    # else:
     #    return "Please answer the questions or complete the exercises before moving to the next step. If you want to move to the next step anyway, please insist on it."
 
 
