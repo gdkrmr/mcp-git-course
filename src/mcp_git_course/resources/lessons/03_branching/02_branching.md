@@ -99,6 +99,10 @@ Branching in Git enables flexible, organized, and collaborative development. By 
    - Edit the file to make the fix,
    - push to the remote repository.
 
+## Note
+
+In the next step we will learn how to merge the changes into another branch.
+
 ## Additional Resources
 
 - [Git Official Documentation: Branches](https://git-scm.com/docs/git-branch)

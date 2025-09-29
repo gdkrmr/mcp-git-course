@@ -1,10 +1,18 @@
 # Rebasing Branches in Git
 
 ## Overview
+
 Rebasing is a way to move or combine a sequence of commits to a new base commit. It helps keep your project history linear and up-to-date with the main branch.
 
-## What is Rebasing?
+### What is Rebasing?
+
 Rebasing takes the changes from one branch and reapplies them on top of another branch. This is often used to update a feature branch with the latest changes from `main` before merging.
+
+There are two philosophies in Git for integrating changes from one branch into another:
+1. **Merging**: Combines the histories of two branches, creating a new commit that has two parents.
+2. **Rebasing**: Reapplies commits from one branch onto another, creating a linear history.
+
+Merging preserves the complete history of both branches, while rebasing creates a cleaner, more linear history. The choice between the two depends on your team's workflow and preferences.
 
 ## Step 1: Prepare for Rebasing
 

@@ -6,10 +6,9 @@ In this lesson, you will learn how to merge branches in Git and resolve conflict
 
 ## Step 1: Understanding Merging
 
-Merging is the process of integrating changes from one branch into another. The most common scenario is merging a feature branch into the main branch after development is complete.
+- **Merging** is the process of integrating changes from one branch into another. The most common scenario is merging a feature branch into the main branch after development is complete.
 
 - **Fast-forward merge:** If the main branch has not changed since the feature branch was created, Git simply moves the branch pointer forward.
-- **Three-way merge:** If both branches have new commits, Git combines the changes and may require conflict resolution.
 
 ## Step 2: Preparing for a Merge
 
@@ -19,7 +18,7 @@ Merging is the process of integrating changes from one branch into another. The 
    ```
 2. Switch to the branch you want to merge into (usually `main` or `master`):
    ```bash
-   git checkout main
+   git switch main
    ```
 3. Pull the latest changes from the remote repository:
    ```bash
@@ -43,7 +42,7 @@ Sometimes, changes in both branches affect the same lines in a file, resulting i
    git status
    ```
 2. Open the conflicted files in your editor. Git marks conflicts like this:
-   ```
+   ```diff
    <<<<<<< HEAD
    Your changes in the current branch
    =======
@@ -63,7 +62,7 @@ Sometimes, changes in both branches affect the same lines in a file, resulting i
 
 ## Step 5: Best Practices for Merging
 
-- Communicate with your team before merging large changes.
+- Communicate with your team before merging large changes. Usually this is done through "Pull requests" and/or "Issues" on the code hosting platform (e.g. Github, Gitlab, ...)
 - Pull the latest changes before starting a merge.
 - Test your code after resolving conflicts.
 - Use descriptive commit messages for merges.
@@ -72,8 +71,9 @@ Sometimes, changes in both branches affect the same lines in a file, resulting i
 
 You have learned how to merge branches in Git and resolve conflicts. Merging is essential for integrating work from multiple contributors and maintaining a cohesive project history.
 
-## Questions
-1. This is an example of a merge conflict. How would you resolve it?
+## Questions/Exercises
+1. Do the [Guestbook exercise](https://git.sc.uni-leipzig.de/ws2025rdm/guestbook). Give the output of the merge conflict.
+2. This is an example of a merge conflict. Resolve it and explain your reasoning.
    ```python
    <<<<<<< HEAD
    print(f"Today is {date.today()}")
@@ -81,7 +81,7 @@ You have learned how to merge branches in Git and resolve conflicts. Merging is 
    print(f"The time is {datetime.now().strftime('%H:%M:%S')}")
    >>>>>>> feature-return-time
    ```
-2. Here is another example of a merge conflict. How would you handle it?
+3. Here is another example of a merge conflict. Resolve it and explain your reasoning.
    ```javascript
    <<<<<<< HEAD
    function calculateTotal(price, tax) {
