@@ -2,9 +2,22 @@ import os
 import json
 from mcp_git_course.config import STATE_DIR, COURSE_DIR
 from fastmcp.exceptions import ToolError
+from typing import TypedDict
 
 
-class CourseState():
+class Lesson(TypedDict):
+    name: str
+    directory: str
+    steps: list[dict[str, str]]
+
+
+class State(TypedDict):
+    current_lesson: int
+    current_step: int
+    lessons: list[Lesson]
+
+
+class CourseState:
     """
     Manages the state of the Git course, including current lesson and step.
     This class is responsible for initializing, loading, saving, and advancing the course state.
@@ -28,14 +41,12 @@ class CourseState():
             Returns the content of the current step in the course.
     """
 
-
     def __init__(self):
         if os.path.exists(os.path.join(STATE_DIR, "state.json")):
             self.load_state()
         else:
-            self.build_initial_state()
+            self.state: State = self.build_initial_state()
             self.save_state()
-
 
     def set_current_lesson_step(self, lesson_idx: int, step_index: int) -> None:
         """
@@ -46,20 +57,25 @@ class CourseState():
             step_index (int): The index of the step to set as current.
         """
         if lesson_idx < 0 or step_index < 0:
-            raise ToolError("Lesson index and step index must be non-negative integers.")
+            raise ToolError(
+                "Lesson index and step index must be non-negative integers."
+            )
 
         if lesson_idx >= len(self.state["lessons"]):
-            raise ToolError(f"Lesson index {lesson_idx} is out of range. There are only {len(self.state['lessons'])} lessons.")
+            raise ToolError(
+                f"Lesson index {lesson_idx} is out of range. There are only {len(self.state['lessons'])} lessons."
+            )
 
         if step_index >= len(self.state["lessons"][lesson_idx]["steps"]):
-            raise ToolError(f"Step index {step_index} is out of range for lesson {lesson_idx}. It has only {len(self.state['lessons'][lesson_idx]['steps'])} steps.")
+            raise ToolError(
+                f"Step index {step_index} is out of range for lesson {lesson_idx}. It has only {len(self.state['lessons'][lesson_idx]['steps'])} steps."
+            )
 
         self.state["current_lesson"] = lesson_idx
         self.state["current_step"] = step_index
         self.save_state()
 
-
-    def build_initial_state(self) -> None:
+    def build_initial_state(self) -> State:
         """
         Read course directory and build the initial state for the course.
         """
@@ -69,34 +85,40 @@ class CourseState():
 
         # lessons have the form "01_basics", "02_working-with-branches", etc., we
         # want to extract the lesson names after sorting them.
-        lesson_dirs = sorted([d for d in os.listdir(COURSE_DIR) if os.path.isdir(os.path.join(COURSE_DIR, d))])
+        lesson_dirs = sorted(
+            [
+                d
+                for d in os.listdir(COURSE_DIR)
+                if os.path.isdir(os.path.join(COURSE_DIR, d))
+            ]
+        )
 
         # each lesson is a directory, we want to extract the steps, that are of the form 01_step1.md, 01_step2.md, etc.
-        lessons = []
+        lessons: list[Lesson] = []
         for d in lesson_dirs:
             lesson_dir = os.path.join(COURSE_DIR, d)
-            lesson_steps = sorted([s for s in os.listdir(lesson_dir) if s.endswith(".md")])
+            lesson_steps = sorted(
+                [s for s in os.listdir(lesson_dir) if s.endswith(".md")]
+            )
             lesson_steps = [
-                {
-                    "name": s.split("_")[1].split(".")[0],
-                    "file": s
-                }
-                for s in lesson_steps
+                {"name": s.split("_")[1].split(".")[0], "file": s} for s in lesson_steps
             ]
 
-            lesson = {
+            lesson: Lesson = {
                 "name": d.split("_")[1],
-                "direcory": d,
-                "steps": lesson_steps
+                "directory": d,
+                "steps": lesson_steps,
             }
             lessons.append(lesson)
 
-        self.state = {
-            "current_lesson": 0,
-            "current_step": 0,
-            "lessons": lessons
-        }
+        return {"current_lesson": 0, "current_step": 0, "lessons": lessons}
 
+    def reset_state(self) -> None:
+        """
+        Resets the course state to the initial state.
+        """
+        self.state = self.build_initial_state()
+        self.save_state()
 
     def load_state(self) -> None:
         """
@@ -107,11 +129,12 @@ class CourseState():
         """
         state_file = os.path.join(STATE_DIR, "state.json")
         if not os.path.exists(state_file):
-            raise ToolError(f"State file '{state_file}' does not exist. Please initialize the state first.")
+            raise ToolError(
+                f"State file '{state_file}' does not exist. Please initialize the state first."
+            )
 
         with open(state_file, "r") as f:
             self.state = json.load(f)
-
 
     def save_state(self) -> None:
         """
@@ -125,7 +148,6 @@ class CourseState():
 
         with open(state_file, "w") as f:
             json.dump(self.state, f, indent=4)
-
 
     def advance_step(self) -> str:
         """
@@ -156,7 +178,6 @@ class CourseState():
         self.save_state()
         return self.get_current_step_content()
 
-
     def get_current_step_content(self) -> str:
         """
         Returns the content of the current step in the course.
@@ -170,13 +191,12 @@ class CourseState():
         lesson = self.state["lessons"][current_lesson]
         step = lesson["steps"][current_step]
 
-        step_path = os.path.join(COURSE_DIR, lesson["direcory"], step["file"])
+        step_path = os.path.join(COURSE_DIR, lesson["directory"], step["file"])
         if os.path.exists(step_path):
             with open(step_path, "r") as f:
                 return f.read()
         else:
             raise ToolError("Step content not found.")
-
 
     def to_json(self) -> str:
         """

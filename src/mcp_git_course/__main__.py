@@ -1,7 +1,9 @@
-from fastmcp import FastMCP #, Context
+from fastmcp import FastMCP  # , Context
 from fastmcp.exceptions import ToolError
 from mcp_git_course.state import CourseState
 from mcp_git_course.prompts import wrap_content_in_prompt
+from typing import Any
+
 
 # This should not be necessary the client should be able to run commands directly
 # @mcp.tool
@@ -32,18 +34,17 @@ from mcp_git_course.prompts import wrap_content_in_prompt
 #         raise ToolError(f"Failed to execute command '{command}': {e.stderr.strip()}")
 
 
-
-
-
 ###################################################################################################################
 ######## MCP tools go here ########################################################################################
 ###################################################################################################################
 
 
-MCP = FastMCP(name="Git Course",
-              instructions="This server provides an interactive course to help users learn Git version control.")
+MCP: FastMCP[Any] = FastMCP(
+    name="Git Course",
+    instructions="This server provides an interactive course to help users learn Git version control.",
+)
 
-STATE = CourseState()
+STATE: CourseState = CourseState()
 
 
 @MCP.tool
@@ -54,8 +55,7 @@ def clear_git_course_state() -> str:
     Returns:
         str: A message indicating that the course history has been cleared.
     """
-    STATE.build_initial_state()
-    STATE.save_state()
+    STATE.reset_state()
     return "Your course history has been cleared. You can start over by using the 'start_git_course' tool."
 
 
@@ -148,7 +148,7 @@ def start_git_lesson_step(lesson_idx: int, step_index: int) -> str:
         str: The content for the current step in the course after setting the lesson and step.
     """
     try:
-        STATE.set_current_lesson_step(lesson_idx, step_index, has_started=True)
+        STATE.set_current_lesson_step(lesson_idx, step_index)
         step_content = STATE.get_current_step_content()
         return wrap_content_in_prompt(step_content)
     except Exception as e:
