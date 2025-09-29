@@ -1,6 +1,7 @@
 # Tracking Changes in Git
 
 ## Overview
+
 In this lesson, you will learn how to track changes in your project using Git. Tracking changes is essential for monitoring modifications, preparing files for commits, and maintaining a clear history of your work.
 
 ## Step 1: Check the Status of Your Repository
@@ -64,7 +65,7 @@ The staging area (also called the "index") is a space where you can collect chan
    ```
 2. This command displays each commit's hash, author, date, and message.
 
-## Step 5: Unstage and Discard Changes (Optional)
+## Step 6: Unstage and Discard Changes (Optional)
 
 - To unstage a file:
   ```bash
@@ -76,25 +77,29 @@ The staging area (also called the "index") is a space where you can collect chan
   ```
 
 ## Conclusion
+
 You have learned how to track changes in your project using Git. By checking status, staging files, committing changes, and viewing history, you can effectively manage your project's evolution.
 
 ## Questions
+
 1. Provide the outputs of running git status and explain:
    1. output of `git status` for step 1
    2. output of `git status` for step 2
    3. output of `git status` for step 3
    4. output of `git status` for step 4
-1. What is the purpose of the staging area in Git?
-2. Here are two commit messages. Which one is more descriptive and why?
+2. What is the purpose of the staging area in Git?
+3. Here are two commit messages. Which one is more descriptive and why?
    - "Fixed bug"
    - "Fixed bug in user authentication that caused login failures for new users"
-3. Why should commits be small and focused on a single change?
-4. Practical
+4. Why should commits be small and focused on a single change?
+5. Practical
     - Create a file named `REAMDE.md` and add some text.
     - stage the file and commit it to the repository.
     - What is the output of `git log`?
     - What is the output of `git diff HEAD..HEAD~`
 
 ## Additional Resources
+
 - [Git Official Documentation: git status](https://git-scm.com/docs/git-status)
 - [Pro Git Book: Recording Changes to the Repository](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)
+

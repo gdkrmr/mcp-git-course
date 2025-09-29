@@ -1,11 +1,14 @@
 # Adding a Remote and Pushing Your Local Repository
 
 ## Overview
+
 In this lesson, you will learn how to connect your local Git repository to a remote server and push your project for the first time. This enables collaboration and backup on a remote platform.
+
+We will use `my-project` from the previous step as an example.
 
 ## Step 1: Create a Remote Repository
 
-1. Log in to your account on [Github](github.com) or any other code hosting platform.
+1. Log in to your Gitlab account on git.sc.uni-leipzig.de or any other code hosting platform.
 2. Create a new repository (for example, named `my-project`).
    - Keep the repository empty. Code hosters will offer to create a `README.md` and other files for you, decline to avoid trouble.
 3. Copy the SSH URL for your new repository. It will look like:

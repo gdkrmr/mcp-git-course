@@ -1,6 +1,7 @@
 # Merging Branches and Resolving Conflicts in Git
 
 ## Overview
+
 In this lesson, you will learn how to merge branches in Git and resolve conflicts that may arise during the process. Merging is a fundamental part of collaborative workflows, allowing you to integrate changes from different branches into a unified codebase.
 
 ## Step 1: Understanding Merging
