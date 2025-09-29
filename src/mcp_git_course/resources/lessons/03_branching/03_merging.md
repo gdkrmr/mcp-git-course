@@ -4,13 +4,13 @@
 
 In this lesson, you will learn how to merge branches in Git and resolve conflicts that may arise during the process. Merging is a fundamental part of collaborative workflows, allowing you to integrate changes from different branches into a unified codebase.
 
-## Step 1: Understanding Merging
+## 1: Understanding Merging
 
 - **Merging** is the process of integrating changes from one branch into another. The most common scenario is merging a feature branch into the main branch after development is complete.
 
 - **Fast-forward merge:** If the main branch has not changed since the feature branch was created, Git simply moves the branch pointer forward.
 
-## Step 2: Preparing for a Merge
+## 2: Preparing for a Merge
 
 1. Ensure your working directory is clean:
    ```bash
@@ -25,7 +25,7 @@ In this lesson, you will learn how to merge branches in Git and resolve conflict
    git pull
    ```
 
-## Step 3: Merging a Branch
+## 3: Merging a Branch
 
 1. Merge the feature branch into your current branch:
    ```bash
@@ -33,7 +33,7 @@ In this lesson, you will learn how to merge branches in Git and resolve conflict
    ```
 2. If there are no conflicts, Git will complete the merge and create a new merge commit.
 
-## Step 4: Resolving Merge Conflicts
+## 4: Resolving Merge Conflicts
 
 Sometimes, changes in both branches affect the same lines in a file, resulting in a conflict. Git will pause the merge and mark the conflicted files.
 
@@ -60,7 +60,7 @@ Sometimes, changes in both branches affect the same lines in a file, resulting i
    ```
    - Git may auto-create a merge commit message. You can edit it if needed.
 
-## Step 5: Best Practices for Merging
+## 5: Best Practices for Merging
 
 - Communicate with your team before merging large changes. Usually this is done through "Pull requests" and/or "Issues" on the code hosting platform (e.g. Github, Gitlab, ...)
 - Pull the latest changes before starting a merge.

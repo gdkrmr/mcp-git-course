@@ -24,7 +24,7 @@ Stashing allows you to temporarily save changes in your working directory that a
    ```
    You should see a list of stashes, e.g., `stash@{0}: WIP on main: ...`.
 
-## Task 3: Apply a Stash
+## 3: Apply a Stash
 
 1. Apply the most recent stash to your working directory:
    ```bash
@@ -36,7 +36,7 @@ Stashing allows you to temporarily save changes in your working directory that a
    ```
    You should see your previously stashed changes as modified files.
 
-## Task 4: Drop or Pop a Stash
+## 4: Drop or Pop a Stash
 
 1. Remove the most recent stash after applying it:
    ```bash

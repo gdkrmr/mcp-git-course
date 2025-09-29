@@ -5,7 +5,7 @@ This lesson covers essential best practices for working with Git and provides tr
 
 ---
 
-## Step 1: Using .gitignore
+## 1: Using .gitignore
 
 ### What is `.gitignore`?
 A `.gitignore` file tells Git which files or directories to ignore in your repository. This is useful for excluding build artifacts, sensitive information, or files that should not be tracked.
@@ -35,7 +35,7 @@ A `.gitignore` file tells Git which files or directories to ignore in your repos
 
 ---
 
-## Step 2: Managing Large Repositories
+## 2: Managing Large Repositories
 
 ### Tips for Large Repos
 - **Use .gitignore:** Exclude unnecessary files to keep your repository size manageable.
@@ -51,7 +51,7 @@ This command shows the size of your repository and objects.
 
 ---
 
-## Step 3: Common Mistakes and How to Fix Them
+## 3: Common Mistakes and How to Fix Them
 
 ### Accidentally Committed Sensitive Data
 1. Remove the file:
@@ -97,7 +97,7 @@ This command shows the size of your repository and objects.
 
 ---
 
-## Step 4: General Best Practices
+## 4: General Best Practices
 
 - **Commit Often:** Make small, frequent commits with clear messages.
 - **Write Descriptive Messages:** Explain what and why, not just what changed.

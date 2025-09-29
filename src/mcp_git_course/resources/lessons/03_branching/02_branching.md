@@ -8,7 +8,7 @@ Branching is a powerful feature in Git that allows you to diverge from the main 
 
 A branch in Git is simply a pointer to a specific commit in your repository’s history. The default branch is usually called `main` or `master`. By creating branches, you can work independently on different tasks without affecting the main codebase.
 
-## Step 1: Viewing Existing Branches
+## 1: Viewing Existing Branches
 
 To see all branches in your repository, use:
 ```bash
@@ -21,7 +21,7 @@ To see all branches, including remote branches:
 git branch -a
 ```
 
-## Step 2: Creating a New Branch
+## 2: Creating a New Branch
 
 To create a new branch, use:
 
@@ -34,7 +34,7 @@ For example, to create a branch called `feature-x`:
 git branch feature-x
 ```
 
-## Step 3: Switching Between Branches
+## 3: Switching Between Branches
 
 To switch to another branch, use:
 
@@ -48,7 +48,7 @@ For example:
 git switch feature-x
 ```
 
-## Step 4: Creating and Switching in One Command
+## 4: Creating and Switching in One Command
 
 You can create and switch to a new branch in one step:
 ```bash
@@ -63,14 +63,14 @@ For example:
 git switch -c bugfix-123
 ```
 
-## Step 5: Understanding Branch Use Cases
+## 5: Understanding Branch Use Cases
 
 - **Feature Development:** Create a branch for each new feature.
 - **Bug Fixes:** Use branches to isolate bug fixes.
 - **Experimentation:** Try new ideas without affecting the main codebase.
 - **Collaboration:** Team members can work on separate branches and merge their changes when ready.
 
-## Step 6: Deleting a Branch
+## 6: Deleting a Branch
 
 Once a branch is no longer needed, you can delete it:
 ```bash

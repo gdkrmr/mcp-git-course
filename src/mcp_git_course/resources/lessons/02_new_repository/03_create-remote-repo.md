@@ -6,7 +6,7 @@ In this lesson, you will learn how to connect your local Git repository to a rem
 
 We will use `my-project` from the previous step as an example.
 
-## Step 1: Create a Remote Repository
+## 1: Create a Remote Repository
 
 1. Log in to your Gitlab account on git.sc.uni-leipzig.de or any other code hosting platform.
 2. Create a new repository (for example, named `my-project`).
@@ -16,7 +16,7 @@ We will use `my-project` from the previous step as an example.
    git@github.com:your-username/my-project.git
    ```
 
-## Step 2: Add the Remote to Your Local Repository
+## 2: Add the Remote to Your Local Repository
 
 1. Open your terminal and navigate to your local project directory (initialized in the previous lesson).
 2. Add the remote repository:
@@ -25,7 +25,7 @@ We will use `my-project` from the previous step as an example.
    ```
    Replace `your-username` and `my-project` with your actual username and repository name.
 
-## Step 3: Push Your Local Repository to the Remote
+## 3: Push Your Local Repository to the Remote
 
 1. Push your local commits to the remote repository:
    ```bash
@@ -37,7 +37,7 @@ We will use `my-project` from the previous step as an example.
      ```
 2. The `-u` flag sets the remote `origin` as the default for future pushes and pulls.
 
-## Step 4: Verify the Push
+## 4: Verify the Push
 
 1. Go to your repository page on [Github](https://github.com).
 2. You should see your files and commit history.

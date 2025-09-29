@@ -3,7 +3,7 @@
 ## Overview
 In this lesson, you will learn how to create a new Git repository on your local machine. Initializing a repository is the first step in tracking changes to your project with Git. We will reuse this directory during this lesson.
 
-## Step 1: Choose or Create a Project Directory
+## 1: Choose or Create a Project Directory
 
 1. Open your terminal.
 2. Navigate to the directory where you want to create your project, or create a new directory:
@@ -12,7 +12,7 @@ In this lesson, you will learn how to create a new Git repository on your local 
    cd my-project
    ```
 
-## Step 2: Initialize the Repository
+## 2: Initialize the Repository
 
 1. Run the following command to initialize a new Git repository:
    ```bash
@@ -20,7 +20,7 @@ In this lesson, you will learn how to create a new Git repository on your local 
    ```
 2. This command creates a hidden `.git` directory in your project folder. `git` will use this directory to store all version control information.
 
-## Step 3: Verify Initialization
+## 3: Verify Initialization
 
 1. To confirm that your repository has been initialized, run:
    ```bash

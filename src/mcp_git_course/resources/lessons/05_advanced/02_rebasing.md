@@ -14,7 +14,7 @@ There are two philosophies in Git for integrating changes from one branch into a
 
 Merging preserves the complete history of both branches, while rebasing creates a cleaner, more linear history. The choice between the two depends on your team's workflow and preferences.
 
-## Task 1: Prepare for Rebasing
+## 1: Prepare for Rebasing
 
 1. Make sure your working directory is clean:
    ```bash
@@ -22,7 +22,7 @@ Merging preserves the complete history of both branches, while rebasing creates 
    ```
    You should see "nothing to commit, working tree clean".
 
-## Task 2: Rebase Your Branch onto Main
+## 2: Rebase Your Branch onto Main
 
 1. Switch to your feature branch:
    ```bash
@@ -34,7 +34,7 @@ Merging preserves the complete history of both branches, while rebasing creates 
    ```
    This will replay your commits on top of the latest `main` branch.
 
-## Task 3: Resolve Conflicts (if any)
+## 3: Resolve Conflicts (if any)
 
 1. If you see a conflict, Git will pause and mark the conflicted files.
 2. Open the conflicted files, resolve the differences, then add the resolved files:
@@ -47,7 +47,7 @@ Merging preserves the complete history of both branches, while rebasing creates 
    ```
 4. Repeat until the rebase is complete.
 
-## Task 4: Verify the Rebase
+## 4: Verify the Rebase
 
 1. Check your commit history:
    ```bash
@@ -55,7 +55,7 @@ Merging preserves the complete history of both branches, while rebasing creates 
    ```
    Your feature branch commits should now appear on top of the latest `main` commits.
 
-## Task 5: Push the Rebasing Result
+## 5: Push the Rebasing Result
 
 1. If you have already pushed your branch before rebasing, you need to force-push:
    ```bash

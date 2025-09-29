@@ -4,7 +4,7 @@
 
 In this lesson, you will learn how to clone a remote Git repository to your local machine. Cloning is the process of creating a local copy of a repository that exists on a remote server. This allows you to work on the project, track changes, and collaborate with others.
 
-## Step 1: Obtain the Repository URL
+## 1: Obtain the Repository URL
 
 To clone a repository, you need its URL. For this lesson, we will use the following repository:
 
@@ -12,7 +12,7 @@ To clone a repository, you need its URL. For this lesson, we will use the follow
 git@git.sc.uni-leipzig.de/ws2025rdm/materials
 ```
 
-## Step 2: Clone the Repository
+## 2: Clone the Repository
 
 1. Open your terminal.
 2. Navigate to the directory where you want to store the cloned repository.
@@ -22,7 +22,7 @@ git@git.sc.uni-leipzig.de/ws2025rdm/materials
    ```
 4. This command will create a new directory named `materials` containing all the files and history from the remote repository.
 
-## Step 3: Verify the Clone
+## 3: Verify the Clone
 
 1. Change into the newly created directory:
    ```bash
@@ -42,7 +42,7 @@ git@git.sc.uni-leipzig.de/ws2025rdm/materials
 
 A clone is a local copy of a repository. It allows you to make changes asynchronously and synchronize them with remote copies of the repository.
 
-## Step 4: Work with the Cloned Repository
+## 4: Work with the Cloned Repository
 
 - You can now edit files, stage changes, commit, and push updates to the remote repository.
 - To fetch new changes from the remote repository:

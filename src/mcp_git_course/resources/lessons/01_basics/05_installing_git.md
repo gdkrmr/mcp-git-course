@@ -3,7 +3,7 @@
 ## Overview
 In this lesson, we will walk through the steps to install Git on your system, verify that it is installed correctly, and set up your basic configuration.
 
-## Step 1: Installing Git
+## 1: Installing Git
 
 ### Windows
 1. Download the Git installer from the official site: [Git for Windows](https://gitforwindows.org/).
@@ -25,7 +25,7 @@ In this lesson, we will walk through the steps to install Git on your system, ve
    sudo apt install git
    ```
 
-## Step 2: Verifying Git Installation
+## 2: Verifying Git Installation
 
 After installation, you can verify that Git is installed correctly by opening a terminal and running:
 ```bash

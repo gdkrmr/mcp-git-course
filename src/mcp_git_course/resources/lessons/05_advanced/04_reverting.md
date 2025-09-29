@@ -3,7 +3,7 @@
 ## Overview
 Reverting allows you to undo changes made by previous commits without rewriting history. This is useful for correcting mistakes or removing unwanted changes in a safe and traceable way.
 
-## Task 1: Identify the Commit to Revert
+## 1: Identify the Commit to Revert
 
 1. Open your terminal and navigate to your repository.
 2. View the commit history:
@@ -12,7 +12,7 @@ Reverting allows you to undo changes made by previous commits without rewriting 
    ```
 3. Find the hash of the commit you want to revert (e.g., `a1b2c3d`).
 
-## Task 2: Revert the Commit
+## 2: Revert the Commit
 
 1. Run the revert command:
    ```bash
@@ -22,7 +22,7 @@ Reverting allows you to undo changes made by previous commits without rewriting 
 2. Git will create a new commit that undoes the changes from the specified commit.
 3. If prompted, edit the commit message to explain why you are reverting.
 
-## Task 3: Verify the Revert
+## 3: Verify the Revert
 
 1. Check your commit history again:
    ```bash
@@ -30,7 +30,7 @@ Reverting allows you to undo changes made by previous commits without rewriting 
    ```
 2. Confirm that a new commit with the message "Revert ..." appears.
 
-## Task 4: Push the Revert to the Remote Repository
+## 4: Push the Revert to the Remote Repository
 
 1. Push your changes:
    ```bash
