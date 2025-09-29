@@ -3,7 +3,7 @@
 ## Overview
 Stashing allows you to temporarily save changes in your working directory that are not yet ready to be committed. This is useful if you need to quickly switch branches or work on something else without losing your current work.
 
-## Task 1: Create a Stash
+## 1. Create a Stash
 
 1. Make changes to a file in your repository (e.g., edit `README.md`).
 2. Save your changes to a stash:
@@ -16,7 +16,7 @@ Stashing allows you to temporarily save changes in your working directory that a
    ```
    You should see "nothing to commit, working tree clean".
 
-## Task 2: List Stashes
+## 2. List Stashes
 
 1. List all stashes you have created:
    ```bash

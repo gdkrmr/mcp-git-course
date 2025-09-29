@@ -3,7 +3,7 @@
 ## Overview
 Tags in Git are used to mark specific points in your repository’s history, such as releases or milestones. Tags make it easy to reference important commits and share stable versions of your project.
 
-## Step 1: Create a Lightweight Tag
+## 1. Create a Lightweight Tag
 
 1. In your project directory, create a tag for the current commit:
    ```bash
@@ -15,7 +15,7 @@ Tags in Git are used to mark specific points in your repository’s history, suc
    ```
    You should see `v1.0` listed.
 
-## Step 2: Create an Annotated Tag
+## 2. Create an Annotated Tag
 
 1. Create an annotated tag with a message:
    ```bash
@@ -26,7 +26,7 @@ Tags in Git are used to mark specific points in your repository’s history, suc
    git show v1.1
    ```
 
-## Step 3: Tag a Specific Commit
+## 3. Tag a Specific Commit
 
 1. Find the commit hash you want to tag:
    ```bash
@@ -37,7 +37,7 @@ Tags in Git are used to mark specific points in your repository’s history, suc
    git tag v1.2 <commit-hash>
    ```
 
-## Step 4: Push Tags to Remote
+## 4. Push Tags to Remote
 
 1. Push a single tag to the remote repository:
    ```bash
@@ -49,7 +49,7 @@ Tags in Git are used to mark specific points in your repository’s history, suc
    ```
 3. Verify tags on the remote platform (e.g., GitHub, GitLab).
 
-## Step 5: List and Delete Tags
+## 5. List and Delete Tags
 
 1. List all tags:
    ```bash
