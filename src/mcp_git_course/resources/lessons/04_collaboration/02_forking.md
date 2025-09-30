@@ -14,11 +14,10 @@ You usually create a fork if you want to propose changes to a project you don't 
    git clone git@host:user/forked-repo.git
    ```
    You can also simply add it as a separate remote to your clone of the original repository.
-4. Create a feature branch, make changes, and push to your fork.
-5. Open a pull request from your fork to the original repository.
+3. Create a feature branch, make changes, and push to your fork.
+4. Open a pull request from your fork to the original repository.
 
----
- 
+
 ## Contributing to Open Source
 
 When contributing to open source projects, follow these steps:

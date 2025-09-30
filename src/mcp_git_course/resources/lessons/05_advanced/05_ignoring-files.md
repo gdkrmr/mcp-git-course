@@ -27,7 +27,7 @@ Some files in your project should not be tracked by Git, such as build artifacts
 ## 3: Add .gitignore to the Repository
 
 1. Stage and commit your `.gitignore` file:
-   ```
+   ```bash
    git add .gitignore
    git commit -m "Add .gitignore to ignore unnecessary files"
    ```
