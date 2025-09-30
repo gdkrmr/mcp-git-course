@@ -1,3 +1,4 @@
+*Lesson 01: Basics, Step 08: SSH Key*
 # Creating and Verifying an SSH Key
 
 ## Overview

@@ -1,3 +1,4 @@
+*Lesson 01: Basics, Step 05: Installing Git*
 # Installing Git
 
 ## Overview

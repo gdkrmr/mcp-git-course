@@ -1,3 +1,4 @@
+*Lesson 05: Advanced, Step 04: Reverting*
 # Reverting Commits in Git
 
 ## Overview

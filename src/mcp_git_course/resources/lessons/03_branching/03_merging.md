@@ -1,3 +1,4 @@
+*Lesson 03: Branching, Step 03: Merging*
 # Merging Branches and Resolving Conflicts in Git
 
 ## Overview

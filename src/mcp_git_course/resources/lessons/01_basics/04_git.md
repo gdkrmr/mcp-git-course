@@ -1,3 +1,4 @@
+*Lesson 01: Basics, Step 04: Introduction to Git*
 # Introduction to Git
 
 ## Overview

@@ -1,3 +1,4 @@
+*Lesson 05: Advanced, Step 05: Best practices*
 # Best Practices and Troubleshooting in Git
 
 ## Overview

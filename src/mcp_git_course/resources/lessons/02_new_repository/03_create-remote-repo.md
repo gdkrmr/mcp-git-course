@@ -1,3 +1,4 @@
+*Lesson 02: New Repository, Step 03: Create Remote Repo*
 # Adding a Remote and Pushing Your Local Repository
 
 ## Overview

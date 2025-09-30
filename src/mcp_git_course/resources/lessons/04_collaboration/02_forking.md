@@ -1,3 +1,5 @@
+*Lesson 04: Collaboration, Step 02: Forking*
+
 ## Forking a Repository
 
 Forking is used when you want to contribute to a repository you don't have write access to (e.g., open source projects).

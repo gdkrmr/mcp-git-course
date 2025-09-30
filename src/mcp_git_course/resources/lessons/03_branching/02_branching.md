@@ -1,3 +1,4 @@
+*Lesson 03: Branching, Step 02: Branching*
 # Branching in Git
 
 ## Overview

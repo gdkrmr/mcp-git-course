@@ -1,3 +1,4 @@
+*Lesson 01: Basics, Step 07: Basic Configuration*
 # Basic Configuration
 
 ## Configure username and email

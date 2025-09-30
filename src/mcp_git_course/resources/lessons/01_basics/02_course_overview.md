@@ -1,3 +1,4 @@
+*Lesson 01: Basics, Step 02: Course Overview*
 # Course Overview: Introduction to Git
 
 This course introduces you to Git, the industry-standard version control system. You will learn the fundamentals of Git, how to manage code collaboratively, and best practices for academic and professional projects.

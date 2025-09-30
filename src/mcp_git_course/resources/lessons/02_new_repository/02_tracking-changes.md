@@ -1,3 +1,4 @@
+*Lesson 02: New Repository, Step 02: Tracking Changes*
 # Tracking Changes in Git
 
 ## Overview

@@ -1,3 +1,4 @@
+*Lesson 05: Advanced Git Concepts, Step 01: Stashing*
 # Stashing Changes in Git
 
 ## Overview

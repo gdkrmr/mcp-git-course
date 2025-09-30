@@ -1,3 +1,4 @@
+*Lesson 05: Advanced, Step 03: Tagging*
 # Tagging Commits in Git
 
 ## Overview

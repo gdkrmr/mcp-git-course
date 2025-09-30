@@ -1,3 +1,4 @@
+*Lesson 02: New Repository, Step 01: Initializing*
 # Initializing a Git Repository
 
 ## Overview

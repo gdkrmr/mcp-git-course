@@ -1,3 +1,4 @@
+*Lesson 05: Advanced, Step 05: Ignoring Files*
 # Ignoring Files with .gitignore
 
 ## Overview

@@ -1,3 +1,5 @@
+*Lesson 04: Collaboration, Step 03: Contributing*
+
 ## Feature Branch Workflow
 
 A feature branch workflow allows each contributor to work on their own branch, separate from the main codebase.

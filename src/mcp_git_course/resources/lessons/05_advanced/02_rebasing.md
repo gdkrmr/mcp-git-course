@@ -1,3 +1,4 @@
+*Lesson 05: Advanced Git Concepts, Step 02: Rebasing Branches in Git*
 # Rebasing Branches in Git
 
 ## Overview

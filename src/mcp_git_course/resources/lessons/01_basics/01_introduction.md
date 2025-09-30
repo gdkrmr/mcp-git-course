@@ -1,3 +1,4 @@
+*Lesson 01: Basics, Step 01: Introduction*
 # Welcome to the Git Course!
 
 Thank you for participating in this Git course! This interactive guide will help you learn how to effectively use Git for version control.

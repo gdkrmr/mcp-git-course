@@ -1,3 +1,4 @@
+*Lesson 01: Basics, Step 03: What is Version Control?*
 # What is Version Control?
 
 ## Overview
