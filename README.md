@@ -10,8 +10,9 @@ Use your local LLM client to learn `git` interactively with the help of this cou
 
 ## How to use
 
-- Set up your local LLM client
-- Install and add `mcp-git-course` as an MCP server to your client
+- Set up your local LLM client.
+- Install and add `mcp-git-course` as an MCP server to your client.
+- Ask your LLM client to "start the git course".
 
 ### Requirements
 
@@ -106,7 +107,7 @@ Add this to your `~/.gemini/settings.json` file:
 
 ## Manually following the course
 
-You can also access the course materials [here](https://github.com/gdkrmr/mcp-git-course/tree/master/src/mcp_git/resources/lessons) without having an LLM as an intermediary.
+You can also access the course materials [here](https://github.com/gdkrmr/mcp-git-course/tree/master/src/mcp_git_course/resources/lessons) without having an LLM as an intermediary.
 
 ## Notice
 
