@@ -7,6 +7,7 @@ Use your local LLM client to learn `git` interactively with the help of this cou
 - This repository contains an MCP server that instructs your LLM client teach you `git`. It contains course materials and instructions.
 - It also keeps track of your progress, so you can continue where you left off.
 - To use, add the MCP server to your local LLM client and say `start git course` to begin the course. You can restart the course at any time by saying `restart git course`.
+- The MCP server keeps track of your progress, you can ask it to `resume the git course` and it will resume the course.
 
 ## How to use
 
@@ -14,7 +15,7 @@ Use your local LLM client to learn `git` interactively with the help of this cou
 - Install and add `mcp-git-course` as an MCP server to your client.
 - Ask your LLM client to "start the git course".
 
-### Requirements
+## Requirements
 
 A local LLM client that supports MCP servers, such as [Zed](https://zed.dev), [Claude code](https://claude.ai), [VS Code](https://code.visualstudio.com), or [Gemini](https://ai.google.dev/gemini).
 
