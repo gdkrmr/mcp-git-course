@@ -39,7 +39,7 @@ from typing import Any
 ###################################################################################################################
 
 
-MCP: FastMCP[Any] = FastMCP(
+MCP: FastMCP[None] = FastMCP(
     name="Git Course",
     instructions="This server provides an interactive course to help users learn Git version control.",
 )
