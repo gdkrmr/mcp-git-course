@@ -20,7 +20,7 @@ Here is the content for this step:
 
 {content}
 
-Try to answer the question and/or solve the exercises. When you are ready to continue, juste say "next step" to move to the next step.
+Try to answer the question and/or solve the exercises. When you are ready to continue, when you are done say "next step" to move to the next step.
 
 </StepContent>
 """
