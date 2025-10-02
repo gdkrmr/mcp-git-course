@@ -10,7 +10,7 @@ In this lesson, you will learn how to clone a remote Git repository to your loca
 To clone a repository, you need its URL. For this lesson, we will use the following repository:
 
 ```
-git@git.sc.uni-leipzig.de/ws2025rdm/materials
+git@git.sc.uni-leipzig.de:ws2025rdm/materials
 ```
 
 ## 2: Clone the Repository
@@ -67,7 +67,7 @@ You have successfully cloned a remote Git repository to your local machine. You 
 
 ## Questions
 
-1. explain the different parts of the command `git clone git@git.sc.uni-leipzig.de/ws2025rdm/materials materials`, which one(s) are optional?
+1. explain the different parts of the command `git clone git@git.sc.uni-leipzig.de:ws2025rdm/materials materials`, which one(s) are optional?
 2. What files and directories were created when you cloned the repository?
 3. Check the commit history, what does the last commit message say?
 4. What is the difference between `git` and `Gitlab` or `GitHub`?
