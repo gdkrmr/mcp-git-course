@@ -54,7 +54,7 @@ use directly via [`uvx`](https://docs.astral.sh/uv/), `uvx` takes care of instal
 }
 ```
 
-note that the exact configuration may be slightly different
+note that the exact configuration may be slightly different, depending on your client.
 
 ### Configure for your client
 
@@ -112,5 +112,5 @@ You can also access the course materials [here](https://github.com/gdkrmr/mcp-gi
 
 ## Notice
 
-This work was inspired by the [mastra mcp server](https://github.com/mastra-ai).
+This work was inspired by MCP course provided by the [mastra mcp server](https://github.com/mastra-ai).
 
