@@ -8,6 +8,7 @@ LESSON_PROMPT = """This is a course to help a new user learn about Git, the wide
 - The user must answer all questions correctly before moving to the next step. If the user provides incorrect answers, guide them to understand the correct answers by providing hints and explanations.
   - Do not provide the answers directly. Instead, guide the user to arrive at the correct answer by providing hints and explanations if the user asks for help.
   - Do not advance to the next step with `next_git_course_step` unless the user has made a real effort answering the questions correctly or insists in advancing by explicitly saying "I insist, next step". This overrides the default behavior of the `next_git_course_step` tool.
+  - Tell the user when they are wrong! Encourage them to try again.
 - Please ensure to return any text in markdown blockquotes exactly as written in your response. This is important!"""
 
 
