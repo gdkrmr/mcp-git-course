@@ -8,6 +8,7 @@ Use your local LLM client to learn `git` interactively with the help of this cou
 - It also keeps track of your progress, so you can continue where you left off.
 - To use, add the MCP server to your local LLM client and say `start git course` to begin the course. You can restart the course at any time by saying `restart git course`.
 - The MCP server keeps track of your progress, you can ask it to `resume the git course` and it will resume the course.
+- Sometimes LLMs get confused you can jump to any lesson b
 
 ## How to use
 
