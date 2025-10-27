@@ -86,7 +86,34 @@ TODO
 
 #### VS Code
 
-TODO
+- Install the Copilot and Copilot Chat 
+- Press Ctrl+Shift+p 
+- Search for "MCP: Add MCP server"
+- Choose "Command (stdio)"
+- As command enter `uvx --from git+https://github.com/gdkrmr/mcp-git-course@master mcp-git-course`
+- As name enter "git-course", or similar
+- The server should appear under the tools icon in the agent panel on the bottom right.
+
+The `mcp.json` file should look as follows:
+
+``` json
+{
+	"servers": {
+		"git-course": {
+			"type": "stdio",
+			"command": "uvx",
+			"args": [
+				"--from",
+				"git+https://github.com/gdkrmr/git-mcp-course.git",
+				"mcp-git-course"
+			]
+		}
+	},
+	"inputs": []
+}
+```
+
+`
 
 #### gemini-cli
 
