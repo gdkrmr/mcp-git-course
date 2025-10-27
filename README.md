@@ -99,6 +99,7 @@ The `mcp.json` file should look as follows:
 ``` json
 {
 	"servers": {
+    // There should be an inline button here to start/restart/stop/etc. the server.
 		"git-course": {
 			"type": "stdio",
 			"command": "uvx",
